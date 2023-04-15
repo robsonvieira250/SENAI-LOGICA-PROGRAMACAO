@@ -1,0 +1,40 @@
+<script>
+
+    estoque = parseInt (prompt("Informe o valor do saldo"));
+    document.write("Estoque: " + estoque + "<br>");
+
+    letra = "s";
+
+    while (letra == "s" ) 
+
+    {
+    tipo = parseInt(prompt("Informe o Nº do tipo entrada: 1-Compra; 2-Venda;"));
+    
+
+    if (tipo == 1)
+        {
+            quantidade = parseInt(prompt("Informe a quantidade da compra"));
+            estoque = estoque + quantidade;
+            document.write ("O valor da compra é " + quantidade + "<br>");
+        }
+
+    if(tipo == 2)
+    {
+        quantidade = parseInt(prompt("Informe a quantidade da venda"));
+    if (estoque  >= quantidade)
+        {
+            estoque = estoque - quantidade;
+            document.write ("O valor da venda é " + quantidade + "<br>");
+        }
+    else
+        {
+             document.write ("Saldo insuficiente" + "<br>");
+             alert("Saldo insuficiente");  
+        }
+
+}
+document.write ("Novo valor do estoque: " + estoque + "<br>");
+letra = prompt("Pretende continuar?  Digite a letra: s = Sim; n = Não ou precione ENTER");
+}
+document.write ("Sistema Finalizado" + "<br>");
+</script>
